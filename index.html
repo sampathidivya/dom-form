@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <pre>
+  <form onsubmit="demo(event)">
+    <label>Role:</label>
+    <input type="text" id="role"/>
+    <label>Name:</label>
+    <input type="text" id="name"/>
+    <label>Age:</label>
+    <input type="text" id="age"/>
+    <label>Blood group:</label>*
+    <input type="text" id="blood" />
+    <label>Phone No:</label>
+    <input type="text" id="phno" />
+    <input type="submit" /> 
+  </form>
+     <div id="div1">
+      <div id="div2"></div>
+        <p id="ip1"></p>
+        <p id="ip2"></p>
+        <p id="ip3"></p>
+        <p id="ip4"></p>
+        <p id="ip5"></p>
+     <!-- </div> -->
+    </div>
+  <p></p>
+  <script>
+    function demo(event){
+      event.preventDefault(); 
+      let div1 = document.getElementById("div1");
+      div1.style.height = "550px";
+      div1.style.width = "250px";
+      div1.style.color = "white";
+      div1.style.backgroundColor = "black"; 
+      div1.style.border = "2px solid black";
+      let img = document.createElement("img");
+      div2.appendChild(img); 
+      img.setAttribute("src", "./assets/images/virat.jpg");
+      img.setAttribute("height", "100");
+      img.setAttribute("width", "100");
+      img.style.paddingLeft = "70px";
+      img.style.paddingTop = "30px";
+      let role = document.getElementById("role").value;
+      let ip1 = document.getElementById("ip1");
+      ip1.innerHTML = "Role:" + role;
+    let name = document.getElementById("name").value;
+      let ip2 = document.getElementById("ip2");
+      ip2.innerHTML = "Name:" + name; 
+      let age = document.getElementById("age").value;
+      let ip3 = document.getElementById("ip3");
+      ip3.innerHTML = "Age:" + age;
+      let blood = document.getElementById("blood").value;
+      let ip4 = document.getElementById("ip4");
+      ip4.innerHTML = "Blood Group:" + blood;
+      let phno = document.getElementById("phno").value;
+      let ip5 = document.getElementById("ip5");
+      ip5.innerHTML = "phone No:" + phno;
+    }
+  </script>
+</body>
+</html>
